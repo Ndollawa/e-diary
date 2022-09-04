@@ -1,15 +1,17 @@
 import Nav from './Components/Nav';
-import SideMenu from './Components/SideMenu';
+import MenuToggler from './Components/MenuToggler';
 import Dashboard from './Dashboard';
 
 function App() {
   return (
    
   <div className="antialiased bg-gray-100">
-      <div className="flex relative" x-data="{navOpen: false}">
+      <div className="flex relative">
         <Nav />
-        <SideMenu />
-        <Dashboard />
+        <main className="flex-1 h-screen overflow-y-scroll overflow-x-hidden">
+          <MenuToggler />
+          <Dashboard />
+        </main>
       </div>
   </div>
   );
