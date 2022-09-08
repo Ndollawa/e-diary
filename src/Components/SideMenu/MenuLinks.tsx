@@ -1,3 +1,7 @@
+ import { ReactComponentElement, ReactElement } from 'react';
+import {IoIosPaper} from 'react-icons/io'
+import { JsxElement } from 'typescript';
+ 
  type Submenu = { 
     id:number;
     title: string;
@@ -10,7 +14,7 @@
   title: string;
   type: string;
   url: string;
-  icon: string;
+  icon: string | JSX.Element;
   isActive: undefined | boolean | null;
   isOpen?: undefined | boolean | null;
   subMenu?:Submenu | undefined;
@@ -25,39 +29,39 @@
       },
       {
       id:2,
-      title: "Dropdown 1",
+      title: "Post Management",
       type: "dropdown",
       url: "",
-      icon: "",
+      icon: <IoIosPaper/>,
       isActive: false,
       isOpen:false,
       subMenu:[
         {
           id:3,
-        title: "Dropdown 2",
+        title: "Create Post",
         type: "link",
         url:"",
         icon:""
       },
       {
         id:4,
-        title: "Dropdown 3",
+        title: "All Posts",
         type: "link",
         url:"",
         icon:""
       },
       {
         id:5,
-        title: "Dropdown 4",
+        title: "Recycle Bin",
         type: "link",
         url:"",
         icon:""
-      } ] 
+      }] 
 
     },
     {
       id:6,
-      title: "Dropdown 2",
+      title: "User Management",
       type: "dropdown",
       url: "",
       icon: "",
@@ -66,21 +70,21 @@
       subMenu:[
         {
         id:7,
-        title: "Dropdown 2",
+        title: "Create User",
         type: "link",
         url:"",
         icon:""
       },
       {
         id:8,
-        title: "Dropdown 3",
+        title: "All Users",
         type: "link",
         url:"",
         icon:""
       },
       {
         id:9,
-        title: "Dropdown 4",
+        title: "Recycle Bin",
         type: "link",
         url:"",
         icon:""
@@ -89,7 +93,7 @@
     },
     {
         id:10,
-        title: "Dropdown 2",
+        title: "Post Categories",
         type: "link",
         url: "",
         icon: "",

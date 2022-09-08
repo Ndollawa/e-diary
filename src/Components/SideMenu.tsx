@@ -5,7 +5,7 @@ import MenuUserProfile from './SideMenu/MenuUserProfile';
 
 function SideMenu() {
   return (<>
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between h-full overflow-y-auto">
                 <div className="p-4">
                     {/* <!-- LOGO --> */}
                     <a className="flex items-center text-white space-x-4" href="#">

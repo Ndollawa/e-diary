@@ -22,12 +22,13 @@ export default function Menuitem() {
                            {item.icon} <span>{item.title}</span>
                         </a> ) 
              break;
+
             case "dropdown":
                     //  DROPDOWN LINK 
              return (<div className="block" key={item.id}>
                             <div className={ item.isActive ?"bg-gray-800 justify-between cursor-pointer " + classes: classes+" justify-between cursor-pointer"} key={item.id} onClick={()=>handleToggleMenu(item.id) }>
                                 <div className="flex items-center space-x-2">
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                                    {item.icon}
                                     <span>{item.title}</span>
                                 </div>
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={item.isOpen ? {display:"none"} : undefined}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path></svg>
@@ -44,6 +45,7 @@ export default function Menuitem() {
                             </div>
                         </div>)
                   break;
+                  
                 default:
                   return undefined;
                   break;

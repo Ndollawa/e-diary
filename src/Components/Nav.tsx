@@ -1,9 +1,13 @@
 import React from 'react'
 import SideMenu from './SideMenu'
 
-function Nav() {
+interface isToggle {
+  isToggle:boolean;
+}
+function Nav({isToggle}: isToggle) {
+ const classStyles ="absolute md:relative w-auto transform md:translate-x-0 h-screen  bg-black transition-all duration-300 "
   return (
-    <nav className="absolute md:relative w-64 transform md:translate-x-0 h-screen overflow-y-scroll bg-black transition-all duration-300">{/*-translate-x-full*/}
+    <nav className={!isToggle ? classStyles +"-translate-x-full": classStyles}>
        
         <SideMenu />
 
