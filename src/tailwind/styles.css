@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.min-h-56{
+    min-height: 14rem;
+}
+.min-w-64{
+    min-width: 16rem;
+}
+.dropdown{
+    width: 20rem;
+    @apply block bg-slate-100 shadow-md absolute min-h-56 right-0 mt-4;
+}
+.dropdown-menu-header::before{
+    position: absolute;
+    top:0;
+    border-right: 2rem solid transparent;
+    border-left: 2rem solid transparent;
+    border-bottom: 5rem solid seashell;
+}
+.dropdown-menu-header{
+    @apply w-full h-12 items-center justify-center flex p-5;
+}
+.dropdown-menu-footer{
+    @apply w-full h-6 items-center justify-center flex p-5 text-cyan-800 text-sm;
+}
+.dropdown .messages{
+    @apply bg-purple-800;
+}
+.dropdown .notifications{
+    @apply bg-red-600;
+}
+.dropdown-menu .items{
+        border-bottom: 1px solid rgba(216, 216, 216, 0.9);
+        min-height: 1.5rem;
+        @apply items-center flex p-3;
+}
