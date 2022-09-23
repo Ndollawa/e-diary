@@ -1,6 +1,6 @@
 // import React, {useState} from 'react'
-import {IoMdMail,IoMdNotifications} from "react-icons/io"
-
+import {IoMdMail,IoMdNotifications,IoMdCog,IoMdArrowDropdown,IoIosPersonAdd,IoIosContact,IoIosCog,IoIosLogOut} from "react-icons/io"
+import pic from "../logo512.png"
 
 interface FuncProp {
   toggleMenu : () => void
@@ -10,41 +10,114 @@ interface FuncProp {
     // const [txt,setTxt] = useState("")
 
   return (
-    <div className="flex justify-between items-center bg-black text-white h-16  z-10">
-                <h1 className="text-2xl font-bold px-4">Better Code</h1>
-                <ul className='flex w-auto h-6 justify-between'>
-                  <li className="mr-4 text-xl relative"><IoMdMail/>
-                  <div className="dropdown">
+    <div className="flex justify-between items-center bg-black text-white h-16  z-2 select-none">
+                <img className="rounded-full w-10 mx-5" src={pic} alt=""/>
+                <div className="items-center flex md:mr-24">
+                <ul className='flex w-full h-6 justify-between text-lg'>
+                  <li className="mr-6 text-xl relative"> <label htmlFor="message" title="Messages"><IoMdMail/> <span className="badge bg-cyan-600"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>2</span></label>
+                  <input type="checkbox" id="message" className="dropdown-checkbox" name="dropdown-menu" />
+                  <div className="dropdown xs:w-72 md:w-96 message-dropdown">
                     <div className="dropdown-menu-header messages">Messages</div>
                       <ul className="dropdown-menu">
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
+                      <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 bg-slate-500"><img className="" src={pic} alt=""/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        
+                        
                       </ul>
                       <div className="dropdown-menu-footer"><a href="">View all</a></div>
                     </div>
                   </li>
-                  <li className="mr-4 text-xl relative"><IoMdNotifications/>
-                    <div className="dropdown">
+                  <li className="mr-6 text-xl relative"><label htmlFor="notification" title="Notifications"><IoMdNotifications/> <span className="badge bg-red-600"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>2</span></label>
+                    <input type="checkbox" id="notification" className="dropdown-checkbox" name="dropdown-menu" />
+                    <div className="dropdown xs:w-72 md:w-96 notification-dropdown">
                       <div className="dropdown-menu-header notifications">Notifications</div>
                       <ul className="dropdown-menu">
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
-                        <li className="items"></li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center bg-blue-600"><IoIosPersonAdd/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-sm font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-sm"><div className="rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center bg-gray-600"><IoIosPersonAdd/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-sm font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-sm"><div className="rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center bg-yellow-600"><IoIosPersonAdd/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-sm font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
+                        <li className="items p-2 text-xs"><div className="rounded-full w-9 h-9 flex-shrink-0 flex items-center justify-center bg-pink-600"><IoIosPersonAdd/></div>&ensp;
+                            <div className="relative items-center">
+                                  <p className="text-xs font-light text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, ratione!</p>
+                              <span className="time">10mins ago</span>
+                            </div>
+                        </li>
                       </ul>
                       <div className="dropdown-menu-footer"><a href="">View all</a></div>
                     </div>
                   </li>
-                  <li className="mr-4 flex items-center md:flex-no-wrap"><div className="rounded-2xl w-6 h-6 bg-slate-500"><img className="" src="" alt=""/></div>
-                  Hello!<span className="font-bold"> Ndubuisi</span></li>
+                  <li className="mr-6 items-center"><a href="" title="Site Setting"><IoMdCog/></a></li>
+                  <li className="mr-6 xs:mr-1 flex  relative items-center md:flex-no-wrap"><label className="flex flex-nowrap" htmlFor="userMenu"><div className="rounded-full w-7 h-7 bg-slate-500 flex-shrink-0 avatar"><img className="" src={pic} alt=""/></div>&ensp;
+                 <div className="md:flex xs:hidden"> Hello!<span className="font-bold"> Ndubuisi</span></div><IoMdArrowDropdown/></label>
+                    <input type="checkbox" className="dropdown-checkbox" id="userMenu" name="dropdown-menu" />
+                    <div className="userMenu-dropdown top-6  xs:-left-20 dropdown overscroll-y-none left-4 xs:w-48 md:w-64">
+                        <ul className="relative text-xs text-gray-700 font-semibold">
+                          <li className="items  px-4"><IoIosContact className="text-2xl"/>Profile</li>
+                          <li className="items  px-4"><IoIosCog className="text-2xl"/>Profile Setting</li>
+                          <li className="items  px-4">Faq</li>
+                          <li className="items  px-4"><IoIosLogOut className="text-2xl"/>Logout</li>
+                        </ul>
+                    </div>
+                 </li>
                 </ul>
                 <button type="button"  className="md:hidden btn p-4 focus:outline-none hover:bg-gray-800" onClick={()=>toggleMenu()}>
                     <svg className="w-6 h-6 fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
+            </div>
     </div>
   )
 }

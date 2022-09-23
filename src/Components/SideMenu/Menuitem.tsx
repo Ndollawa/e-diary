@@ -37,8 +37,8 @@ export default function Menuitem() {
                             <div className="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1"  style={!item.isOpen ? {display:"none"} : undefined}>
                             {
                             item.subMenu?.map((link,i):(JSX.Element|undefined) =>{
-                             return ( <a href={link.url} key={"subMenu_"+i} className="block py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
-                                    {link.title}
+                             return ( <a href={link.url} key={"subMenu_"+i} className="flex items-center flex-nowrap w-full py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
+                                    {link.icon}&ensp;{link.title}
                                 </a>)
                             })
                            }

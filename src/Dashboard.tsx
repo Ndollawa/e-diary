@@ -3,11 +3,7 @@ import React from 'react'
 function Dashboard() {
   return (
         <>
-           
-            <section className="max-w-7xl mx-auto py-4 px-5">
-                <div className="flex justify-between items-center border-b border-gray-300">
-                    <h1 className="text-2xl font-semibold pt-2 pb-6">Dashboard</h1>
-                </div>
+          
 
                 {/* <!-- STATISTICS --> */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 py-6">
@@ -347,10 +343,7 @@ function Dashboard() {
                 </div>
                 {/* <!-- END OF TABLE --> */}
 
-                
-            </section>
-
-           {/*<!-- END OF PAGE CONTENT -->*/}
+           
        
             </>
   )

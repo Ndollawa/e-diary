@@ -1,13 +1,13 @@
  import { ReactComponentElement, ReactElement } from 'react';
-import {IoIosPaper} from 'react-icons/io'
-import { JsxElement } from 'typescript';
+import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,IoIosCreate,IoIosBrowsers} from 'react-icons/io'
+
  
  type Submenu = { 
     id:number;
     title: string;
     type: string;
     url: string;
-    icon: string;
+    icon: string|JSX.Element;
    }[];
  type NavLinks = {
   id: number;
@@ -24,7 +24,7 @@ import { JsxElement } from 'typescript';
         title: "Dashboard",
         type: "link",
         url:"",
-        icon:"",
+        icon:<IoIosBrowsers/>,
         isActive: true,
       },
       {
@@ -41,21 +41,21 @@ import { JsxElement } from 'typescript';
         title: "Create Post",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoIosCreate/>
       },
       {
         id:4,
         title: "All Posts",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoMdPaper/>
       },
       {
         id:5,
         title: "Recycle Bin",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoMdTrash/>
       }] 
 
     },
@@ -64,7 +64,7 @@ import { JsxElement } from 'typescript';
       title: "User Management",
       type: "dropdown",
       url: "",
-      icon: "",
+      icon: <IoMdPeople/>,
       isActive: false,
       isOpen:false,
       subMenu:[
@@ -73,21 +73,21 @@ import { JsxElement } from 'typescript';
         title: "Create User",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoMdPersonAdd/>
       },
       {
         id:8,
         title: "All Users",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoMdPeople/>
       },
       {
         id:9,
         title: "Recycle Bin",
         type: "link",
         url:"",
-        icon:""
+        icon:<IoMdTrash/>
       } ] 
 
     },
@@ -96,7 +96,7 @@ import { JsxElement } from 'typescript';
         title: "Post Categories",
         type: "link",
         url: "",
-        icon: "",
+        icon: <IoMdPricetags/>,
         isActive: false,
         isOpen:false
       },
