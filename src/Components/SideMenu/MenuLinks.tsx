@@ -1,5 +1,6 @@
  import { ReactComponentElement, ReactElement } from 'react';
 import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,IoIosCreate,IoIosBrowsers} from 'react-icons/io'
+import {FaRegQuestionCircle} from "react-icons/fa"
 
  
  type Submenu = { 
@@ -23,7 +24,7 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
         id: 1, 
         title: "Dashboard",
         type: "link",
-        url:"",
+        url:"/",
         icon:<IoIosBrowsers/>,
         isActive: true,
       },
@@ -31,7 +32,7 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
       id:2,
       title: "Post Management",
       type: "dropdown",
-      url: "",
+      url: "#",
       icon: <IoIosPaper/>,
       isActive: false,
       isOpen:false,
@@ -40,21 +41,21 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
           id:3,
         title: "Create Post",
         type: "link",
-        url:"",
+        url:"/posts/create",
         icon:<IoIosCreate/>
       },
       {
         id:4,
         title: "All Posts",
         type: "link",
-        url:"",
+        url:"/posts",
         icon:<IoMdPaper/>
       },
       {
         id:5,
         title: "Recycle Bin",
         type: "link",
-        url:"",
+        url:"/posts/recyclebin",
         icon:<IoMdTrash/>
       }] 
 
@@ -63,7 +64,7 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
       id:6,
       title: "User Management",
       type: "dropdown",
-      url: "",
+      url: "#",
       icon: <IoMdPeople/>,
       isActive: false,
       isOpen:false,
@@ -72,21 +73,21 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
         id:7,
         title: "Create User",
         type: "link",
-        url:"",
+        url:"/users/create",
         icon:<IoMdPersonAdd/>
       },
       {
         id:8,
         title: "All Users",
         type: "link",
-        url:"",
+        url:"/users",
         icon:<IoMdPeople/>
       },
       {
         id:9,
         title: "Recycle Bin",
         type: "link",
-        url:"",
+        url:"/users/recyclebin",
         icon:<IoMdTrash/>
       } ] 
 
@@ -95,17 +96,17 @@ import {IoIosPaper,IoMdPeople,IoMdPricetags,IoMdPersonAdd,IoMdTrash,IoMdPaper,Io
         id:10,
         title: "Post Categories",
         type: "link",
-        url: "",
+        url: "/category",
         icon: <IoMdPricetags/>,
         isActive: false,
         isOpen:false
       },
       {
         id:11,
-        title: "Dropdown 3",
+        title: "FAQ",
         type: "link",
-        url: "",
-        icon: "",
+        url: "/faq",
+        icon: <FaRegQuestionCircle/>,
         isActive: false,
         isOpen:false
       }]

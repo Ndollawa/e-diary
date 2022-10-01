@@ -1,5 +1,7 @@
 // import React, {useState} from 'react'
+import {Link,  useNavigate} from "react-router-dom"
 import {IoMdMail,IoMdNotifications,IoMdCog,IoMdArrowDropdown,IoIosPersonAdd,IoIosContact,IoIosCog,IoIosLogOut} from "react-icons/io"
+import {FaRegQuestionCircle} from "react-icons/fa"
 import pic from "../logo512.png"
 
 interface FuncProp {
@@ -100,16 +102,16 @@ interface FuncProp {
                       <div className="dropdown-menu-footer"><a href="">View all</a></div>
                     </div>
                   </li>
-                  <li className="mr-6 items-center"><a href="" title="Site Setting"><IoMdCog/></a></li>
+                  <li className="mr-6 items-center"><Link to="/sitesettings" title="Site Setting"><IoMdCog/></Link></li>
                   <li className="mr-6 xs:mr-1 flex  relative items-center md:flex-no-wrap"><label className="flex flex-nowrap" htmlFor="userMenu"><div className="rounded-full w-7 h-7 bg-slate-500 flex-shrink-0 avatar"><img className="" src={pic} alt=""/></div>&ensp;
                  <div className="md:flex xs:hidden"> Hello!<span className="font-bold"> Ndubuisi</span></div><IoMdArrowDropdown/></label>
                     <input type="checkbox" className="dropdown-checkbox" id="userMenu" name="dropdown-menu" />
                     <div className="userMenu-dropdown top-6  xs:-left-20 dropdown overscroll-y-none left-4 xs:w-48 md:w-64">
                         <ul className="relative text-xs text-gray-700 font-semibold">
-                          <li className="items  px-4"><IoIosContact className="text-2xl"/>Profile</li>
-                          <li className="items  px-4"><IoIosCog className="text-2xl"/>Profile Setting</li>
-                          <li className="items  px-4">Faq</li>
-                          <li className="items  px-4"><IoIosLogOut className="text-2xl"/>Logout</li>
+                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosContact className="text-2xl"/>Profile</Link></li>
+                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosCog className="text-2xl"/>Profile Setting</Link></li>
+                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><FaRegQuestionCircle  className="text-2xl"/> Faq</Link></li>
+                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosLogOut className="text-2xl"/>Logout</Link></li>
                         </ul>
                     </div>
                  </li>

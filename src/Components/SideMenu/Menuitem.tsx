@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import {MenuItems} from "./MenuLinks"
 
 export default function Menuitem() {
@@ -18,9 +19,9 @@ export default function Menuitem() {
            switch(item.type){
             case "link":
                     // BASIC LINK
-              return (<a href={item.url} className={ item.isActive ?"bg-gray-800 " + classes: classes } key={item.id}>
+              return (<Link to={item.url} className={ item.isActive ?"bg-gray-800 " + classes: classes } key={item.id}>
                            {item.icon} <span>{item.title}</span>
-                        </a> ) 
+                        </Link> ) 
              break;
 
             case "dropdown":
@@ -37,9 +38,9 @@ export default function Menuitem() {
                             <div className="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1"  style={!item.isOpen ? {display:"none"} : undefined}>
                             {
                             item.subMenu?.map((link,i):(JSX.Element|undefined) =>{
-                             return ( <a href={link.url} key={"subMenu_"+i} className="flex items-center flex-nowrap w-full py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
+                             return ( <Link to={link.url} key={"subMenu_"+i} className="flex items-center flex-nowrap w-full py-2 px-4 hover:bg-gray-800 hover:text-white rounded">
                                     {link.icon}&ensp;{link.title}
-                                </a>)
+                                </Link>)
                             })
                            }
                             </div>

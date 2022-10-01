@@ -1,8 +1,9 @@
 import React from "react";
+import Tinymce from "../Middlewares/Tinymce";
 
 const CreatePost = () => {
   return (
-    <div className="w-full card bg-slate-200 p-5">
+    <div className="w-full card bg-slate-200 p-5 rounded-xl">
       <form
         action=""
         id="createpost"
@@ -82,73 +83,60 @@ const CreatePost = () => {
                 </select>
               </div>
 
-              <div className="col-span-6">
+            
+
+              <div className="col-span-6 sm:col-span-3">
                 <label
-                  htmlFor="street-address"
+                  htmlFor="postCoverImage"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Street address
+                Post Cover Iamge
                 </label>
                 <input
-                  type="text"
-                  name="street-address"
-                  id="street-address"
-                  autoComplete="street-address"
+                  type="file"
+                  name="postCoverImage"
+                  id="postCoverImage"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
-              <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+              <div className="col-span-6 sm:col-span-3">
                 <label
-                  htmlFor="city"
+                  htmlFor="postAttachments"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  City
+                  Post Attachments
                 </label>
                 <input
-                  type="text"
-                  name="city"
-                  id="city"
-                  autoComplete="address-level2"
+                  type="file"
+                  name="postAttachments"
+                  id="postAttachments"
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
               </div>
 
-              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+            
+                <div className="col-span-6">
                 <label
-                  htmlFor="region"
+                  htmlFor="postContent"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  State / Province
+                  Post Content<span className="required"> *</span>
                 </label>
-                <input
-                  type="text"
-                  name="region"
-                  id="region"
-                  autoComplete="address-level1"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
-              </div>
-
-              <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-                <label
-                  htmlFor="postal-code"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  ZIP / Postal code
-                </label>
-                <input
-                  type="text"
-                  name="postal-code"
-                  id="postal-code"
-                  autoComplete="postal-code"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                />
+                {/* <textarea
+                  name="postContent"
+                  id="postContent"
+                  rows={20}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea> */}
+            <Tinymce />
               </div>
             </div>
           </div>
         </fieldset>
-      
+      <div className="flex items-center justify-between w-full py-4 px-10">
+        <button type="submit" className="w-24 h-10 p-2 bg-slate-300 shadow-md rounded-xl" name=" ">Cancel</button>
+        <button type="submit" className="w-24 h-10 p-2 bg-blue-800 text-white shadow-md rounded-xl" name=" ">Submit</button>
+      </div>
       </form>
     </div>
   );
