@@ -3,6 +3,21 @@
 @tailwind utilities;
 
  @layer base {
+.pt-18{
+    padding-top:4rem;/* 64px */
+}
+.z-2{
+    z-index: 2;
+}
+.z-3{
+    z-index: 3;
+}
+.z-4{
+    z-index: 4;
+}
+.z-5{
+    z-index: 5;
+}
  .min-h-56{
     min-height: 14rem;
     }
@@ -44,6 +59,9 @@
         margin: 0;
         padding: 0;
     }
+}
+label{
+    @apply my-1 py-2;
 }
 .dropdown{
     /* width: 24rem;
@@ -118,5 +136,17 @@
     overflow: hidden;
   }
   .footer{
-    @apply  bg-black text-white absolute -bottom-5 w-full h-14 flex items-center justify-center mt-20;
+    @apply  bg-black z-5 text-white fixed -bottom-0 w-full h-14 flex items-center justify-center mt-20 right-0;
   }
+  .tag-container{
+    @apply mt-1 flex rounded-md shadow-sm  items-stretch overflow-x-hidden;
+   }
+  .tag-wrapper{
+   @apply p-1 border-2 border-gray-600 rounded-sm flex flex-wrap items-center m-0 w-full;
+  }
+  .tag{
+    @apply p-1 text-xs border border-gray-600 rounded-sm flex items-center bg-slate-300 mx-1;
+   }
+   .tag-input{
+    @apply flex-1 text-xl  p-1.5 outline-none border-none w-fit;
+   }

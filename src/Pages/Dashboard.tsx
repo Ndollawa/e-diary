@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import props from "../utils/client/pageProps";
 
-function Dashboard() {
+
+const Dashboard:React.FC<props> = ({pageProps}:props) => {
   return (
-        <>
-          
-
+     
+    <section className="max-w-7xl mx-auto py-4 px-5 h-full">
+    <div className="flex justify-between items-center border-b border-gray-300">
+        <h1 className="text-2xl font-semibold pt-2 pb-6">{pageProps.pageTitle}</h1>
+    </div>
                 {/* <!-- STATISTICS --> */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4 py-6">
                     <div className="bg-white shadow rounded-sm flex justify-between items-center py-3.5 px-3.5">
@@ -345,7 +349,7 @@ function Dashboard() {
 
            
        
-            </>
+            </section>
   )
 }
 

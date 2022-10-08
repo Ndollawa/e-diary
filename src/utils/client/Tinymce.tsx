@@ -10,7 +10,7 @@ export default function Tinymce() {
 //     }
 //   };
   return (
-    <>
+    <div className="border-gray-600 border-4">
       <Editor
         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
         onInit={(evt, editor) => editorRef.current = editor}
@@ -30,6 +30,6 @@ export default function Tinymce() {
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         }}
       />
-    </>
+    </div>
   );
 }

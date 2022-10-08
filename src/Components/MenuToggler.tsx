@@ -12,7 +12,7 @@ interface FuncProp {
     // const [txt,setTxt] = useState("")
 
   return (
-    <div className="flex justify-between items-center bg-black text-white h-16  z-2 select-none">
+    <div className="flex fixed top-0 right-0 w-full justify-between items-center bg-black text-white h-16  z-5 select-none">
                 <img className="rounded-full w-10 mx-5" src={pic} alt=""/>
                 <div className="items-center flex md:mr-24">
                 <ul className='flex w-full h-6 justify-between text-lg'>
@@ -107,10 +107,10 @@ interface FuncProp {
                  <div className="md:flex xs:hidden"> Hello!<span className="font-bold"> Ndubuisi</span></div><IoMdArrowDropdown/></label>
                     <input type="checkbox" className="dropdown-checkbox" id="userMenu" name="dropdown-menu" />
                     <div className="userMenu-dropdown top-6  xs:-left-20 dropdown overscroll-y-none left-4 xs:w-48 md:w-64">
-                        <ul className="relative text-xs text-gray-700 font-semibold">
+                        <ul className="relative text-xs text-gray-700">
                           <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosContact className="text-2xl"/>Profile</Link></li>
                           <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosCog className="text-2xl"/>Profile Setting</Link></li>
-                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><FaRegQuestionCircle  className="text-2xl"/> Faq</Link></li>
+                          <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><FaRegQuestionCircle  className="text-2xl"/>Faq</Link></li>
                           <li className="items  px-4"><Link to="" className="flex items-center flex-nowrap"><IoIosLogOut className="text-2xl"/>Logout</Link></li>
                         </ul>
                     </div>
